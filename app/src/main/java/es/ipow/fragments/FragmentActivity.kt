@@ -2,6 +2,8 @@ package es.ipow.fragments
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
 import es.ipow.fragments.databinding.ActivityFragmentBinding
 
 class FragmentActivity : AppCompatActivity() {
@@ -16,30 +18,22 @@ class FragmentActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragmentContainerView,fragment3)
-            //Añade añade el fragmento a la pila
+            //Añade añade el fragmento a la pila de actividad
             addToBackStack(null)
             commit()
         }
-        b.btnFrg3.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView,fragment3)
-                addToBackStack(null)
-                commit()
-            }
-        }
-        b.btnFrg4.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView,fragment4)
-                addToBackStack(null)
-                commit()
-            }
-        }
-        b.btnFrg5.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentContainerView,fragment5)
-                addToBackStack(null)
-                commit()
-            }
+        setFragment(fragment3)
+
+        b.btnFrg3.setOnClickListener { setFragment(fragment3) }
+        b.btnFrg4.setOnClickListener { setFragment(fragment4) }
+        b.btnFrg5.setOnClickListener { setFragment(fragment5) }
+    }
+    fun setFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragmentContainerView,fragment)
+            //Añade añade el fragmento a la pila de actividad
+            addToBackStack(null)
+            commit()
         }
     }
 }
