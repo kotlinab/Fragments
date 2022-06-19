@@ -13,6 +13,7 @@ class FragmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         b = ActivityFragmentBinding.inflate(layoutInflater)
         setContentView(b.root)
+
         val fragment3 = ThirdFragment()
         val fragment4 = FourthFragment()
         val fragment5 = FithFragment()
@@ -23,7 +24,7 @@ class FragmentActivity : AppCompatActivity() {
             addToBackStack(null)
             commit()
         }
-        setFragment(fragment3)
+        // setFragment(fragment3)
 
         b.btnFrg3.setOnClickListener { setFragmentAnim(fragment3) }
         b.btnFrg4.setOnClickListener { setFragmentAnim(fragment4) }
@@ -43,10 +44,10 @@ class FragmentActivity : AppCompatActivity() {
             .beginTransaction()
             .addToBackStack(null)
             .setCustomAnimations(
-                R.anim.slide_in,
-                R.anim.fade_out,
-                R.anim.fade_in,
-                R.anim.slide_out
+                R.anim.slide_in, // enter
+                R.anim.fade_out, // exit
+                R.anim.fade_in,  // popEnter
+                R.anim.slide_out // popExit
             )
             .replace(R.id.fragmentContainerView,fragment)
             .commit()
