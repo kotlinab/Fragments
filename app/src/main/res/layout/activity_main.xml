@@ -3,23 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/first_frg"
-        android:name="es.ipow.fragments.FirstFragment"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        tools:layout="@layout/fragment_first"
- />
+        android:orientation="horizontal">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/second_frg"
-        android:name="es.ipow.fragments.SecondFragment"
-        android:layout_width="0dp"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/first_frg"
+            android:name="es.ipow.fragments.FirstFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_first" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/second_frg"
+            android:name="es.ipow.fragments.SecondFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            tools:layout="@layout/fragment_second" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        tools:layout="@layout/fragment_second" />
+        android:layout_weight="10"
+        android:minHeight="32dp"
+        android:onClick="clickNext"
+        android:text="@string/next_activity" />
+
 </LinearLayout>

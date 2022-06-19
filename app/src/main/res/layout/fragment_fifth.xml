@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    android:background="#B3E5FC"
+    tools:context=".FithFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -11,6 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="16sp"
-        android:text="@string/second_fragment" />
+        android:text="@string/fifth_fragment" />
 
 </FrameLayout>

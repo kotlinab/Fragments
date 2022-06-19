@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FragmentActivity">
+
+    <Button
+        android:id="@+id/btnFrg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trd_fragment"
+        app:layout_constraintEnd_toStartOf="@+id/btnFrg4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFrg4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f4th_fragment"
+        app:layout_constraintEnd_toStartOf="@+id/btnFrg5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnFrg3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFrg5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f5th_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnFrg4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="es.ipow.fragments.ThirdFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFrg3"
+        tools:layout="@layout/fragment_third" />
+</androidx.constraintlayout.widget.ConstraintLayout>
