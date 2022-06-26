@@ -42,19 +42,31 @@
         android:name="es.ipow.fragments.fragments.ThirdFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnNext2"
+        app:layout_constraintBottom_toTopOf="@+id/btnDialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFrg3"
         tools:layout="@layout/fragment_third" />
 
     <Button
-        android:id="@+id/btnNext2"
-        android:layout_width="0dp"
+        android:id="@+id/btnDialog"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickDialog"
+        android:text="@string/fragment_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPass"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickNext"
         android:text="@string/next_activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDialog" />
 </androidx.constraintlayout.widget.ConstraintLayout>

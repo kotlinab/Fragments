@@ -62,4 +62,8 @@ class FragmentActivity : AppCompatActivity() {
     fun onClickDialog(view: View){
         DialogFragment().show(supportFragmentManager, DialogFragment.TAG)
     }
+    fun clickNext(view: View){
+        val intent = Intent(this, PassActivity::class.java)
+        startActivity(intent)
+    }
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grapht"
+    app:startDestination="@id/mainActivity2">
+
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="es.ipow.fragments.fragments.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" />
+    <fragment
+        android:id="@+id/fithFragment"
+        android:name="es.ipow.fragments.fragments.FithFragment"
+        android:label="fragment_fifth"
+        tools:layout="@layout/fragment_fifth" />
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/thirdFragment">
+        <fragment
+            android:id="@+id/thirdFragment"
+            android:name="es.ipow.fragments.fragments.ThirdFragment"
+            android:label="fragment_third"
+            tools:layout="@layout/fragment_third" />
+    </navigation>
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="es.ipow.fragments.MainActivity"
+        android:label="MainActivity" />
+</navigation>
