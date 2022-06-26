@@ -4,8 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import es.ipow.fragments.databinding.ActivityFragmentBinding
+import es.ipow.fragments.fragments.DialogFragment
 import es.ipow.fragments.fragments.FithFragment
 import es.ipow.fragments.fragments.FourthFragment
 import es.ipow.fragments.fragments.ThirdFragment
@@ -54,5 +57,9 @@ class FragmentActivity : AppCompatActivity() {
             )
             .replace(R.id.fragmentContainerView,fragment)
             .commit()
+    }
+
+    fun onClickDialog(view: View){
+        DialogFragment().show(supportFragmentManager, DialogFragment.TAG)
     }
 }

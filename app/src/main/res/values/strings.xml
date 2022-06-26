@@ -9,6 +9,11 @@
     <string name="f4th_fragment">4th Frag</string>
     <string name="f5th_fragment">5th Frag</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="next_activity">Siguiente Activity</string>
+    <string name="next_activity">Fragment Dialog</string>
     <string name="dialogFragment">Dialog Fragment</string>
+    <string name="dialogo_confirmar_borrado">¿Estás seguro que desea borrar los datos?</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="Cancelar">Cancelar</string>
+
+
 </resources>
