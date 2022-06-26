@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textColor="@color/white">
+
+    <item
+        android:id="@+id/opCopy"
+        android:icon="@drawable/ic_copy"
+        android:title="Copy"
+        android:orderInCategory="4"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/opPaste"
+        android:icon="@drawable/ic_paste"
+        android:title="Paste"
+        android:orderInCategory="5"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/opCut"
+        android:icon="@drawable/ic_cut"
+        android:title="Cut"
+        android:orderInCategory="6"
+        app:showAsAction="ifRoom|withText" />
+
+</menu>

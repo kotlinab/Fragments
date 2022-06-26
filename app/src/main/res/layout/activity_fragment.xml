@@ -39,12 +39,22 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="es.ipow.fragments.ThirdFragment"
+        android:name="es.ipow.fragments.fragments.ThirdFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFrg3"
         tools:layout="@layout/fragment_third" />
+
+    <Button
+        android:id="@+id/btnNext2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickNext"
+        android:text="@string/next_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

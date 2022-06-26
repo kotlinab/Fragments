@@ -1,11 +1,14 @@
 package es.ipow.fragments
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
 import es.ipow.fragments.databinding.ActivityFragmentBinding
+import es.ipow.fragments.fragments.FithFragment
+import es.ipow.fragments.fragments.FourthFragment
+import es.ipow.fragments.fragments.ThirdFragment
 
 class FragmentActivity : AppCompatActivity() {
     private lateinit var b:ActivityFragmentBinding
